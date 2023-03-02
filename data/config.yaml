@@ -1,0 +1,34 @@
+name: the GraphIT team
+enableToc: false # table of content
+openToc: false
+enableSidebar: true
+enableLinkPreview: true
+enableLatex: true
+enableCodeBlockTitle: true
+enableCodeBlockCopy: true
+enableCallouts: true
+enableSPA: true
+enableFooter: true
+enableContextualBacklinks: true
+enableRecentNotes: false
+enableGitHubEdit: true
+enableMermaid: true
+GitHubLink: https://github.com/PDA-UR/GraphIT-homepage/tree/hugo/content
+# semantic search currently unused
+search:
+  enableSemanticSearch: false
+  operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
+  operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
+# footer
+links:
+  - link_name: Discord
+    link: https://####
+  - link_name: GitHub
+    link: https://github.com/PDA-UR/GraphIT
+  - link_name: Impressum
+    link: https://www.ur.de/impressum/startseite/index.html
+# SEO stuff
+description: "~25 words that describe GraphIT"
+page_title: "GraphIT"
+logo: "logo.svg"
+logo_alt: "GraphIT logo"

@@ -1,0 +1,4 @@
+<div class="content-list">
+  {{$notes := .Site.RegularPages.ByLastmod.Reverse }} {{$notes := .Site.RegularPages.RelatedTo
+  (keyVals "tags" "post")}} {{partial "page-list.html" (first 3 $notes)}}
+</div>
