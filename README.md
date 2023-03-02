@@ -1,6 +1,6 @@
 # GraphIT - Homepage
 
-The homepage for the GraphIT project.
+The [homepage](https://pda-ur.github.io/GraphIT-homepage/) for the GraphIT project.
 
 ## Changing content
 
