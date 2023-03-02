@@ -1,6 +1,6 @@
 .logo {
-  max-width: 4em;
-  max-height: 4em;
+  width: 4em;
+  height: 4em;
   margin-right: 1em;
 }
 
@@ -9,4 +9,11 @@
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+// collapse the sidebar if width is too small
+@media screen and (max-width: 500px) {
+  #page-title {
+    display: none;
+  }
 }

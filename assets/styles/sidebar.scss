@@ -21,3 +21,10 @@
 .page-list-sidebar > .section-li > .section > .desc > h4 {
   margin-top: 0;
 }
+
+// collapse the sidebar if width is too small
+@media screen and (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
+}
