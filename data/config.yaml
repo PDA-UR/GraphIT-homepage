@@ -13,7 +13,7 @@ enableContextualBacklinks: true
 enableRecentNotes: false
 enableGitHubEdit: true
 enableMermaid: true
-GitHubLink: https://github.com/PDA-UR/GraphIT-homepage/tree/hugo/content
+GitHubLink: https://github.com/PDA-UR/GraphIT-homepage/tree/main/content
 # semantic search currently unused
 search:
   enableSemanticSearch: false
