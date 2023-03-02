@@ -6,6 +6,6 @@ tags:
 
 ## Team
 
-- [Leonie Schrod](people/leonie-schrod.md)
-- [Alexander Weichart](people/alexander-weichart.md)
-- [Raphael Wimmer](people/raphael-wimmer.md)
+- [Leonie Schrod](notes/leonie-schrod.md)
+- [Alexander Weichart](notes/alexander-weichart.md)
+- [Raphael Wimmer](notes/raphael-wimmer.md)
