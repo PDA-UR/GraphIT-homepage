@@ -1,5 +1,0 @@
-<div class="sidebar">
-  <h3>Recent Activity</h3>
-  {{$notes := .Site.RegularPages.ByLastmod.Reverse }} {{$notes := .Site.RegularPages.RelatedTo
-  (keyVals "tags" "activity")}} {{partial "page-list-sidebar.html" (first 3 $notes)}}
-</div>
