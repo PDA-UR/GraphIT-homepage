@@ -2,8 +2,6 @@
 
 ## Dev
 
-This website is powered by [quartz](https://github.com/jackyzha0/quartz)
-
 ### Changing content
 
 To make content changes, edit markdown files in `content/notes`.
@@ -53,3 +51,6 @@ To make config changes, edit `data/config.yaml` and `data/graphConfig.yaml`. For
 #### Layouts
 
 - `layouts/*.html`: html templates used by hugo
+
+
+This website is powered by [quartz](https://github.com/jackyzha0/quartz)
