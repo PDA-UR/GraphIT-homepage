@@ -15,7 +15,7 @@ To make config changes, edit `data/config.yaml` and `data/graphConfig.yaml`. For
 ## Previewing changes locally
 
 - install dependencies:
-  - go
+  - [Go](https://go.dev/)
   - hugo-obsidian: `go install github.com/jackyzha0/hugo-obsidian@latest`
 - serve locally: `make serve`
 
