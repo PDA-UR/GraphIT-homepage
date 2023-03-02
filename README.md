@@ -1,16 +1,18 @@
 # GraphIT - Homepage
 
+The homepage for the GraphIT project.
+
 ## Changing content
 
 To make content changes, edit markdown files in `content/notes`.
 
 ### Using with Obsidian
 
-You can use [Obsidian](https://obsidian.md/) for editing content: [guide](<[/content/private/quartz-docs/obsidian.md](https://quartz.jzhao.xyz/notes/editing#:~:text=content/)>)
+You can use [Obsidian](https://obsidian.md/) for editing content: [guide](https://quartz.jzhao.xyz/notes/editing#:~:text=content/)
 
 ## Changing configuration
 
-To make config changes, edit `data/config.yaml` and `data/graphConfig.yaml`. For more information see [changing configuration](<[/content/private/quartz-docs/config.md](https://quartz.jzhao.xyz/notes/config#:~:text=conf/)>).
+To make config changes, edit `data/config.yaml` and `data/graphConfig.yaml`. For more information see [configuration](https://quartz.jzhao.xyz/notes/config#:~:text=conf/).
 
 ## Previewing changes locally
 
@@ -23,7 +25,7 @@ To make config changes, edit `data/config.yaml` and `data/graphConfig.yaml`. For
 
 To publish changes, push to the `main` branch. The site will be automatically built and deployed.
 
-## File structure
+## Project file structure
 
 ### Important files
 
