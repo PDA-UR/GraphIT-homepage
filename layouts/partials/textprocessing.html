@@ -185,14 +185,15 @@
   {{$_botText:=$refBottom | findRE `>.+;<a` }}
   
 
-  {{ $botText:="" }}
+  {{ $botText:=`` }}
+
 
   {{ range $_index, $_botText := $_botText }}
     {{ if eq $index $_index }}
-      {{ $botText = $_botText }}
+      {{ $botText = printf "%s%s" $botText $_botText}}
     {{ end }}
   {{ end }}
-  {{ $botText = replace $botText ";" "" }}
+  {{ $botText = replace $botText ";<a" "" }}
   {{ $botText = replace $botText ">" "" }}
 
   {{ $newRef := "<sub>"}}
@@ -205,16 +206,9 @@
 
   {{ $content = replace $content $refText $newRef }}
 
-  {{ $debug = printf "%s\n%s" $debug $refText }}
-  {{ $debug = printf "%s\n%s" $debug $newRef }}
-  {{ $debug = printf "%s\n%s" $debug $botText }}
-  {{ $debug = printf "%s\n%s" $debug $index }}
+
   
 {{ end }}
 
-
-{{ $debug}}
-
-<br>
 
 {{ $content | safeHTML }}

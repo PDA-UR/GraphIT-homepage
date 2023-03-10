@@ -10,4 +10,4 @@ enableToc: false
 - [Posts](notes/posts.md)
 - [About](notes/about.md)
 
-[^note]: this is an example for a very well documented phenomenon
+[^note]: this is an example for a very well documented phenomenon his is an example for a very well documented phenomenon

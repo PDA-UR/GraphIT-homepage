@@ -1,0 +1,30 @@
+.footnote-sidenote {
+  // float to right side, absolute
+  position: absolute;
+  height: auto;
+  left: 50%;
+  margin-left: 28em;
+  margin-top: 8px;
+  padding-right: 5px;
+  font-size: 0.8rem;
+  // allow wrapping
+  word-wrap: normal;
+  line-height: 1;
+  background-color: var(--light);
+}
+
+// hover
+.footnote-sidenote:hover {
+  z-index: 10;
+  padding: 5px;
+  background-color: var(--light);
+  box-shadow: 0 0 5px 0 var(--lightgray);
+  transform: translate(-10px, -10px);
+}
+
+// hide if mobile
+@media (max-width: 900px) {
+  .footnote-sidenote {
+    display: none;
+  }
+}

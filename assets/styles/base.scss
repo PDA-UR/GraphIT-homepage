@@ -26,11 +26,15 @@ html {
 }
 
 .singlePage {
-  padding: 4em 30vw;
+  padding: 4em 10vw;
   margin: 0 auto;
-  max-width: 1000px;
-  @media all and (max-width: 1200px) {
-    padding: 25px 5vw;
+  max-width: 40em;
+}
+
+@media (max-width: 900px) {
+  .singlePage {
+    padding: 4em 5vw;
+    max-width: 45em;
   }
 }
 
