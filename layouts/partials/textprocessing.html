@@ -159,4 +159,62 @@
   {{$content = replace $content . $fixed}}
 {{end}}
 
+
+
+
+{{ $refsText:= $content | findRE `<a href="#[^\"]+" class="footnote-ref" role="doc-noteref">([0-9]+)</a>` }}
+{{ $refsBottom:=$content | findRE `<li id="fn:[0-9]+" role="doc-endnote">(.|\n)*?</li>` }}
+
+
+<!-- for each refBottomn -->
+
+{{ $debug:=""}}
+
+{{ range $index, $refBottom := $refsBottom }}
+  <!-- get the coressponding refText by index -->
+
+  {{ $refText:="" }}
+
+  {{ range $_index, $_refText := $refsText }}
+    {{ if eq $index $_index }}
+      {{ $refText = $_refText }}
+    {{ end }}
+  {{ end }}
+
+
+  {{$_botText:=$refBottom | findRE `>.+;<a` }}
+  
+
+  {{ $botText:="" }}
+
+  {{ range $_index, $_botText := $_botText }}
+    {{ if eq $index $_index }}
+      {{ $botText = $_botText }}
+    {{ end }}
+  {{ end }}
+  {{ $botText = replace $botText ";" "" }}
+  {{ $botText = replace $botText ">" "" }}
+
+  {{ $newRef := "<sub>"}}
+  {{ $newRef = printf "%s%s" $newRef $refText }}
+  {{ $newRef = printf "%s%s" $newRef "<sub class='footnote-sidenote'>"}}
+  {{ $newRef = printf "%s%s" $newRef $botText }}
+  {{ $newRef = printf "%s%s" $newRef "</sub>"}}
+  {{ $newRef = printf "%s%s" $newRef "</sub>"}}
+
+
+  {{ $content = replace $content $refText $newRef }}
+
+  {{ $debug = printf "%s\n%s" $debug $refText }}
+  {{ $debug = printf "%s\n%s" $debug $newRef }}
+  {{ $debug = printf "%s\n%s" $debug $botText }}
+  {{ $debug = printf "%s\n%s" $debug $index }}
+  
+{{ end }}
+
+
+{{ $debug}}
+
+<br>
+
 {{ $content | safeHTML }}

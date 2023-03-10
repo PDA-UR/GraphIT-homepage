@@ -29,3 +29,10 @@
   --outlinegray: #4a4a4a !important;
   --highlighted: #7a3431;
 }
+
+.footnote-sidenote {
+  // float to right side, absolute
+  position: absolute;
+  right: 10rem;
+  font-size: 0.8rem;
+}
