@@ -173,34 +173,31 @@
 {{ range $index, $refBottom := $refsBottom }}
   <!-- get the coressponding refText by index -->
 
-  {{ $refText:="" }}
+  {{ $refText := index $refsText $index}}
 
-  {{ range $_index, $_refText := $refsText }}
-    {{ if eq $index $_index }}
-      {{ $refText = $_refText }}
-    {{ end }}
-  {{ end }}
+  {{ $refIndex := $refText | findRE `[0-9]+` }}
+  {{$refIndex := index $refIndex 0}}
 
 
-  {{$_botText:=$refBottom | findRE `>.+;<a` }}
+  {{$_botText := $refBottom | findRE `>.+;<a` }}
   
 
-  {{ $botText:=`` }}
+  {{ $botText:= " " }}
 
+  {{ $_botText := index $_botText 0}}
+  {{ $botText = printf "%s%s" $botText $_botText}}
 
-  {{ range $_index, $_botText := $_botText }}
-    {{ if eq $index $_index }}
-      {{ $botText = printf "%s%s" $botText $_botText}}
-    {{ end }}
-  {{ end }}
   {{ $botText = replace $botText ";<a" "" }}
   {{ $botText = replace $botText ">" "" }}
 
   {{ $newRef := "<sub>"}}
   {{ $newRef = printf "%s%s" $newRef $refText }}
-  {{ $newRef = printf "%s%s" $newRef "<sub class='footnote-sidenote'>"}}
-  {{ $newRef = printf "%s%s" $newRef $botText }}
-  {{ $newRef = printf "%s%s" $newRef "</sub>"}}
+    {{ $newRef = printf "%s%s" $newRef "<sub class='footnote-sidenote'>"}}
+      {{ $newRef = printf "%s%s" $newRef "<sup class='footnote-index'>"}}
+      {{ $newRef = printf "%s%s" $newRef $refIndex}}
+      {{ $newRef = printf "%s%s" $newRef "</sup>"}}
+    {{ $newRef = printf "%s%s" $newRef $botText }}
+    {{ $newRef = printf "%s%s" $newRef "</sub>"}}
   {{ $newRef = printf "%s%s" $newRef "</sub>"}}
 
 
